@@ -7,7 +7,7 @@ import rabbitRoutes from './rabbits/routes/rabbits.routes'
 dotenv.config()
 
 const app: Express = express()
-const port = process.env.PORT
+const port = 7070
 
 /* Routes */
 app.use('/cats', catRoutes)
