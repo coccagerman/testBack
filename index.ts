@@ -10,7 +10,7 @@ const app: Express = express()
 const port = 7070
 
 app.get('/', (req: Request, res: Response) => {
-    res.render('Im alive!')
+    res.send('Im alive!')
 })
 
 /* Routes */
