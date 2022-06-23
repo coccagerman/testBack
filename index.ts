@@ -1,4 +1,4 @@
-import express, { Express } from 'express'
+import express, { Express, Request, Response } from 'express'
 import dotenv from 'dotenv'
 
 import catRoutes from './cats/routes/cats.routes'
@@ -8,6 +8,10 @@ dotenv.config()
 
 const app: Express = express()
 const port = 7070
+
+app.get('/', (req: Request, res: Response) => {
+    res.render('Im alive!')
+})
 
 /* Routes */
 app.use('/cats', catRoutes)
